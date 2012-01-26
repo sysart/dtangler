@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="_build/eclipse/classes_test" path="test"/>
+	<classpathentry kind="src" output="_build/eclipse/classes_testutil" path="testutil"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dtangler-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-junit-4.4"/>
+	<classpathentry kind="output" path="_build/eclipse/classes"/>
+</classpath>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="src" output="_build/eclipse/classes_test" path="test"/>
+	<classpathentry kind="src" output="_build/testdata-good-deps-classes" path="testdata-good-deps"/>
+	<classpathentry kind="src" output="_build/eclipse/classes_testutil" path="testutil"/>
+	<classpathentry kind="src" output="_build/testdata-cyclic-classes" path="testdata-cyclic-deps"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-junit-4.4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-bumblebee"/>
+	<classpathentry kind="output" path="_build/eclipse/classes"/>
+</classpath>

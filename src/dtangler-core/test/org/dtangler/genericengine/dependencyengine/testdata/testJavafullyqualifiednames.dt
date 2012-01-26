@@ -1,0 +1,4 @@
+location{foo.jar}
+package{foo.jar foo.jar/eg.process}
+package{foo.jar foo.jar/eg.filters}
+class{foo.jar foo.jar/eg.filters foo.jar/eg.filters.InFilter} : class{foo.jar foo.jar/eg.process foo.jar/eg.process.Process}

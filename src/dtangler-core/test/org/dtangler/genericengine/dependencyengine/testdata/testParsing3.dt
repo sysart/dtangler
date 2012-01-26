@@ -1,0 +1,35 @@
+0 {A}
+1 {A B}
+1 {A C}
+1 {A D} : 1 {A B}
+1 {A D} : 1 {A B}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B E} : 2 {A B F}
+2 {A B F}
+2 {A B G} : 2 {A B F}
+2 {A B G} : 2 {A B F}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D H} : 2 {A B G}
+2 {A D I} : 2 {A B E}
+2 {A D I} : 2 {A B F}
+2 {A D I} : 2 {A B F}
+2 {A D I} : 2 {A B F}
+2 {A D I} : 2 {A B G}
+2 {A D I} : 2 {A B G}
+2 {A D I} : 2 {A D H}
+2 {A D I} : 2 {A D H}
+2 {A D I} : 2 {A D H}
+2 {A D I} : 2 {A D H}

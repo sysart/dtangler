@@ -1,0 +1,6 @@
+_build/*
+_release/*
+*/_build/*
+*/_release/*
+*/*.svn/*
+

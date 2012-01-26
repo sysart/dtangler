@@ -1,0 +1,319 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html><head><title>dtangler documentation 1.1.1</title><link rel="stylesheet" type="text/css" href="stylesheet.css"/></head><body><h1>dtangler documentation 1.1.1</h1><h3>Index</h3><ul><li><a href="#org.dtangler.testsuites.docsuites.Dtangler">dtangler 1.1.1</a></li><ul><li><a href="#org.dtangler.testsuites.docsuites.DtanglerCommandLine">Command line tool</a></li><ul><li><a href="#org.dtangler.testsuites.docsuites.QuickStart">Quick start</a></li><ul><li><a href="#org.dtangler.testsuites.docsuites.QuickStart.summaryOfRunOptions">Summary of run options</a></li><ul></ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest">Run options: Setup</a></li><ul><li><a href="#org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.configFile">Config file</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.commandLineParametersOverrideConfigFileParameters">Command line parameters override config file parameters</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.analysisPath">Analysis path</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.ignoreFilesFromTheAnalysis">Ignore files from the analysis</a></li><ul></ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest">Run options: Configuration</a></li><ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.forbiddenDependencies">Forbidden dependencies</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.cyclesAreDisallowedByDefault">Cycles are disallowed by default</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.specifyGroupsToSimplifyRules">Specify groups to simplify rules</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.excludeItemsFromGroups">Exclude items from groups</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.allowedDependencies">Allowed dependencies</a></li><ul></ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest">Run options: Java-specific</a></li><ul><li><a href="#org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.defaultScope">Default scope</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.locationScope">Location scope</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.packageScope">Package scope</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.classScope">Class scope</a></li><ul></ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest">Return values and error messages</a></li><ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.cyclesFoundWhenCyclesAreAllowed">Cycles found when cycles are allowed</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.cyclesFoundWhenCyclesAreDisallowed">Cycles found when cycles are disallowed</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.noCyclesFound">No cycles found</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.noRuleViolations">No rule violations</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsBetweenSingleItems">Rule violations between single items</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsBetweenGroups">Rule violations between groups</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsAndExcludedItems">Rule violations and excluded items</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.usingGroupsAndSingleItemsTogether">Using groups and single items together</a></li><ul></ul><li><a href="#org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.violationsOnLowerScope">Violations on lower scope</a></li><ul></ul></ul></ul><li><a href="#org.dtangler.testsuites.docsuites.DtanglerGui">GUI</a></li><ul><li><a href="#org.dtangler.swingui.mainview.impl.BasicFeaturesTest">Basic features</a></li><ul><li><a href="#org.dtangler.swingui.mainview.impl.BasicFeaturesTest.viewInformationAboutDtangler">View information about dtangler</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.BasicFeaturesTest.exitTheGui">Exit the gui</a></li><ul></ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest">Managing configurations</a></li><ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.currentConfigurationFileName">Current configuration file name</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.creatingANewConfiguration">Creating a new configuration</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponCreatingANewConfiguration">Changed configuration upon creating a new configuration</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.openAnExistingConfigurationFile">Open an existing configuration file</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponOpeningAnExistingConfigurationFile">Changed configuration upon opening an existing configuration file</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.saveConfiguration">Save configuration</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.saveConfigurationToDifferentFile">Save configuration to different file</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponExit">Changed configuration upon exit</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropConfigFileOntoDtangler">Drag and drop config file onto dtangler</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponDragAndDropConfigFileOntoDtangler">Changed configuration upon drag and drop config file onto dtangler</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropInputFoldersOntoDtangler">Drag and drop input folders onto dtangler</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropNonFileContentsOntoDtangler">Drag and drop non file contents onto dtangler</a></li><ul></ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest">DSM interaction</a></li><ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomIn">Zoom in</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomInOntoSpecificItems">Zoom in onto specific items</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomInOntoDependencies">Zoom in onto dependencies</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest.testZoomOut">Test zoom out</a></li><ul></ul><li><a href="#org.dtangler.swingui.mainview.impl.DsmInteractionTest.showingShortenedItemNames">Showing shortened item names</a></li><ul></ul></ul></ul></ul></ul><a name="org.dtangler.testsuites.docsuites.Dtangler"/><h1>dtangler 1.1.1 </h1>
+<p>dtangler is a tool for analysing dependencies and producing DSMs (<em>Dependency Structure Matrices</em>). Currently, dtangler supports the analysis of Java classes. </p>
+<p>With dtangler, you can define project-specific <em>design rules</em> that specify what dependencies are allowed, and what aren't. This encourages SW architects to consider and communicate the dependency structure in detail, and helps identify any possible deviations from the defined rules. </p>
+<p>dtangler comes with a command line UI and a GUI. The command line version  is mostly useful when integrating dtangler with automated builds. Its return value tells whether or not the analysed input contains violations. The GUI  version can be used to examine DSMs in various detail levels.   </p>
+<p>The <a href="http://www.dtangler.org/about_dependencies" />about dependencies page</a> has more background information on dependencies and DSMs; the purpose of this  document is to describe how to use dtangler.  </p>
+<a name="org.dtangler.testsuites.docsuites.DtanglerCommandLine"/><h1>Command line tool </h1>
+<p>This section explains how to use the command line version of dtangler. You can either provide your configuration straight from the command line or from a properties  file. Command line parameters <em>override</em> any parameters of the same type given in the  properties file. </p>
+<p>dtangler outputs a DSM of the dependencies and reports all encountered violations.  The exit value is non-zero if violations were found. </p>
+<p>dtangler is run from the command line by entering: </p>
+
+
+<code><pre>java -jar dtangler-core.jar &lt;list of run options&gt;
+</pre></code>
+
+<a name="org.dtangler.testsuites.docsuites.QuickStart"/><h1>Quick start </h1>
+<a name="org.dtangler.testsuites.docsuites.QuickStart.summaryOfRunOptions"/><h2>Summary of run options </h2>
+
+
+<code><pre>
+Usage: 
+	-&lt;run option&gt;=&lt;argument&gt;
+
+	You can enter multiple arguments to the same option by separating
+	them with a semicolon (;).
+
+	You can enter multiple values to the same argument by separating
+	them with a comma (,).
+
+List of possible run options:
+
+Setup: 
+
+	-configFile=&lt;path and name of the configuration properties file&gt;
+		Path of the config file.
+
+	-input=&lt;path to folder containing the items being analyzed&gt;
+		Path of items being analyzed.
+		-input= is interchangeable with the older -classPath= run option.
+
+	-ignoreFileMask=&lt;mask for items ignored&gt;
+		Items being ignored.
+
+Configuring dependency rules: 
+
+	-cyclesAllowed=&lt;true|false&gt;
+		Allow/disallow cyclic dependencies. Default value: false
+
+	-groups=&lt;group name&gt; contains &lt;item name&gt; does not contain &lt;item name&gt;
+		Group items to simplify configuration.
+		-groups= is interchangeable with the older -group= run option.
+
+	-rules=&lt;item name&gt; cannot depend on &lt;item name&gt;;&lt;item name&gt; can depend on &lt;item name&gt;
+		Specify forbidden and allowed dependencies. 
+		Allowed dependencies override forbidden dependencies.
+
+Java-specific parameters: 
+
+	-scope=&lt;locations|packages|classes&gt;
+		Specify the scope of the dependency analysis. 
+		Default value: packages
+
+The full documentation with examples can be read from:
+	http://www.dtangler.org/documentation 
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest"/><h1>Run options: Setup </h1>
+<a name="org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.configFile"/><h2>Config file </h2>
+<p>You can specify a properties file path if you want to use a previously  created configuration. </p>
+<p>For example: </p>
+
+
+<code><pre>-configFile=/C:/Documents and Settings/kaisakit/DSM/svn/dtangler/dtangler-core/_build/eclipse/classes_test/org/dtangler/core/acceptancetests/input/exampleConfig.properties
+</pre></code>
+
+<p>Config file parameters are similar to the command line parameters,  with the following exceptions:  <ul><li>The leading '-' from each parameter is omitted </li>
+<li>Double quotes from all paths are omitted </li>
+<li>Each run option is specified on its own row </li>
+<li>You can divide long parameters to multiple rows by adding '\'  to the end of the row being divided </li>
+</ul>
+</p>
+<p>The contents of an example config file: </p>
+
+
+<code><pre>cyclesAllowed=true
+
+groups=util contains *util*
+
+rules=@util cannot depend on org.app; \
+      org.ui cannot depend org.gui
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.commandLineParametersOverrideConfigFileParameters"/><h2>Command line parameters override config file parameters </h2>
+<p>If the same run option is defined in both the command line  and properties file, the command line version is used. </p>
+<a name="org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.analysisPath"/><h2>Analysis path </h2>
+<p><strong><code>input</code></strong> defines the path to folder(s) containing the items  for the dependency analysis. You can enter multiple  paths by separating them with semicolons (;).  </p>
+<p>For example: </p>
+
+
+<code><pre>-input=c:/projects/myProgram/build;temp/stuff
+</pre></code>
+
+<p>If the path contains empty spaces, remember to surround the path with  double quotes (e.g. "C:/Documents and Settings").	 </p>
+<p><em>Backward compatibility:</em> the older <code>classPath</code> run option is interchangeable with <code>input</code>.    </p>
+<a name="org.dtangler.core.acceptancetests.input.SetupParsingAcceptanceTest.ignoreFilesFromTheAnalysis"/><h2>Ignore files from the analysis </h2>
+<p>The <code>ignoreFileMask</code> run option lets you ignore files from the dependency analysis. <ul><li>you can enter multiple masks with semicolons </li>
+<li>you can use asterisks (*) as wildcards </li>
+</ul>
+</p>
+<p>For example, if you want to exclude test files from the analysis,  you could specify: </p>
+
+
+<code><pre>-ignoreFileMask=*test*;*Test*
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest"/><h1>Run options: Configuration </h1>
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.forbiddenDependencies"/><h2>Forbidden dependencies </h2>
+<p>Specifies what dependencies are <em>not allowed.</em></p>
+<p>Usage: </p>
+
+
+<code><pre>-rules=&lt;item name&gt; cannot depend on &lt;item name&gt;
+</pre></code>
+
+<ul><li>You can enter <em>multiple items</em> by separating them with commas (,).  </li>
+<li>You can enter <em>multiple rules</em> by separating them with semi-colons (;). </li>
+</ul>
+<p>For example: </p>
+
+
+<code><pre>-rules=y cannot depend on x, z; b, c cannot depend on a
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.cyclesAreDisallowedByDefault"/><h2>Cycles are disallowed by default </h2>
+<p>If the <strong><code>cyclesAllowed</code></strong> option is omitted, cycles are treated as errors. </p>
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.specifyGroupsToSimplifyRules"/><h2>Specify groups to simplify rules </h2>
+<p>Configuring dependency rules that apply to multiple items is easier when  done with groups. You can also use asterisks (*) as wildcards when entering  group members.  </p>
+<p>Usage: </p>
+
+
+<code><pre>-groups=&lt;group name&gt; contains &lt;member name&gt;
+</pre></code>
+
+<ul><li>You can enter <em>multiple members</em> to a group by separating them with commas.  </li>
+<li>You can enter <em>multiple groups</em> by separating them with semi-colons. </li>
+</ul>
+<p>For example: </p>
+
+
+<code><pre>-groups=MyGroup contains foo, bar; PublicGroup contains *public*
+</pre></code>
+
+<p><em>Backward compatibility:</em> the older <code>group</code> run option is interchangeable with <code>groups</code>. 	 </p>
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.excludeItemsFromGroups"/><h2>Exclude items from groups </h2>
+<p>Items can be excluded from a group with the <strong><code>does not contain</code></strong> option. </p>
+<p>For example: </p>
+
+
+<code><pre>-groups=Org contains org.* does not contain org.public.*,org.util.*
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.input.ConfigurationParsingAcceptanceTest.allowedDependencies"/><h2>Allowed dependencies </h2>
+<p>Allowed dependencies provide a way to make exceptions to forbidden dependencies. Allowed dependencies <strong>override</strong> forbidden dependencies. </p>
+<p>Allowed dependencies are listed alongside forbidden dependencies   in <strong><code>rules</code></strong>, with the parameter <strong><code>can depend on</code></strong>.  </p>
+<p>Consider the following example: </p>
+
+
+<code><pre>-groups=Domain contains org.domain.*
+-rules=@Domain cannot depend on @Domain; org.domain.public.foo can depend on org.domain.public.bar
+</pre></code>
+
+<ul><li>A group that contains all items starting with 'org.domain.' is specified.  </li>
+<li>All dependencies between the items in the group are forbidden. </li>
+<li>The 'can depend on' rule overrides the 'cannot depend on' rule and allows  dependencies from org.domain.public.foo to org.domain.public.bar. </li>
+</ul>
+<a name="org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest"/><h1>Run options: Java-specific </h1>
+<p>With scopes, you can select the level of detail for the dependency analysis. For example, with package scope, Java packages will be used as rows and  columns in the DSM. </p>
+<a name="org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.defaultScope"/><h2>Default scope </h2>
+<p>If the <code>scope</code> option is omitted, package scope is used. </p>
+<a name="org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.locationScope"/><h2>Location scope </h2>
+<p>Level of detail: the locations for the class files being analysed,  given with the <code>input</code> run option. </p>
+<p>Analyzing dependencies between locations can come in handy if you  want to see how projects depend on each other, for example. </p>
+<a name="org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.packageScope"/><h2>Package scope </h2>
+<p>Java package level detail. </p>
+<a name="org.dtangler.core.acceptancetests.input.JavaArgumentParsingAcceptanceTest.classScope"/><h2>Class scope </h2>
+<p>Java class level detail. </p>
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest"/><h1>Return values and error messages </h1>
+<p>If any of the specified rules are broken in the analysed code,  dtangler will produce a rule violation message and exit with a non-zero value. </p>
+<p>Cycles are always reported. They cause a non-zero exit value by default.  </p>
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.cyclesFoundWhenCyclesAreAllowed"/><h2>Cycles found when cycles are allowed </h2>
+<p>If cycles are allowed, cycles are reported but they do not cause an error. </p>
+<p>For example, a possible output could be:  </p>
+
+
+<code><pre>Cycle: Dependable1--&gt;Dependable2--&gt;Dependable1	
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.cyclesFoundWhenCyclesAreDisallowed"/><h2>Cycles found when cycles are disallowed </h2>
+<p>Cycles are reported, and dtangler's exits with a non-zero value. </p>
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.noCyclesFound"/><h2>No cycles found </h2>
+<p>If cycles are not found, no cycle violations are reported and the exit value is not affected. </p>
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.noRuleViolations"/><h2>No rule violations </h2>
+<p>If no rule violations are found, the exit value is not affected.  </p>
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsBetweenSingleItems"/><h2>Rule violations between single items </h2>
+<p>When a forbidden dependency has been found, the broken rule is  reported in the output. </p>
+<p>For example, if the rule  </p>
+
+
+<code><pre>-rules=A cannot depend on B
+</pre></code>
+
+<p>is broken, the following violation is produced:		  </p>
+
+
+<code><pre>Rule violation: A cannot depend on B
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsBetweenGroups"/><h2>Rule violations between groups </h2>
+<p>Rules constructed with groups are handled in the same way as  rules with single items. </p>
+<p>Consider the following arguments:		  </p>
+
+
+<code><pre>-groups=Util contains *util*;App contains *app*
+-rules=@Util cannot depend on @App
+</pre></code>
+
+<p>If there is a dependency between any members of the groups, the output will be: </p>
+
+
+<code><pre>Rule violation: Group Util cannot depend on Group App
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.ruleViolationsAndExcludedItems"/><h2>Rule violations and excluded items </h2>
+<p>Dependencies to and from items that were <em>excluded</em> from groups do not affect the outcome of group rules.   </p>
+<p>For example, with dependencies <code>A->C->B</code>, the following arguments won't generate a violation because C has been excluded from the group:		  </p>
+
+
+<code><pre>-groups=All contains * does not contain C
+-rules=@All cannot depend on @All
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.usingGroupsAndSingleItemsTogether"/><h2>Using groups and single items together </h2>
+<p>You can combine single items and group items freely in rule definitions: </p>
+
+
+<code><pre>-groups=Foo contains eg.foo*; Bay contains eg.bay*
+-rules=@Foo cannot depend on eg.bar; eg.bar cannot depend on @Bay		 
+</pre></code>
+
+<p>With dependencies <code>eg.foo->eg.bar->eg.bay</code>, the resulting violation output  would look like this: </p>
+
+
+<code><pre>Rule violation: eg.bar cannot depend on Group Bay
+Rule violation: Group Foo cannot depend on eg.bar
+</pre></code>
+
+<a name="org.dtangler.core.acceptancetests.validation.ReturnValuesAcceptanceTest.violationsOnLowerScope"/><h2>Violations on lower scope </h2>
+<p>A notification is printed if an item contains violations  on any of its more detailed scopes.  </p>
+<p>For example, a cycle between two classes, <em>Cat</em> and <em>Dog</em>,  both inside the same Java package <em>animals</em>, will produce a  notification of this type on package scope: </p>
+
+
+<code><pre>animals contains a violation: Cycle: Cat--&gt;Dog--&gt;Cat
+</pre></code>
+
+<a name="org.dtangler.testsuites.docsuites.DtanglerGui"/><h1>GUI </h1>
+<p>The dtangler GUI is an interactive, graphical standalone tool to help you analyze dependencies. The GUI can also be used to create configurations that can be used with the command line dtangler to automatically analyze dependencies. This is particularly useful when this is done through continuous integration. </p>
+<a name="org.dtangler.swingui.mainview.impl.BasicFeaturesTest"/><h1>Basic features </h1>
+<a name="org.dtangler.swingui.mainview.impl.BasicFeaturesTest.viewInformationAboutDtangler"/><h2>View information about dtangler </h2>
+<p>Additional information and the version number of dtangler can be viewed by selecting  <strong>'About'</strong> from the <strong>'Help'</strong> menu. </p>
+<a name="org.dtangler.swingui.mainview.impl.BasicFeaturesTest.exitTheGui"/><h2>Exit the gui </h2>
+<p>The dtangler GUI can be closed by selecting <strong>'Exit'</strong> from the <strong>'File'</strong> menu. </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest"/><h1>Managing configurations </h1>
+<p>The configurations that you make inside the Gui can be saved to- and loaded from files. </p>
+<p>The dtangler gui configuration files are compatible with the ones used by the dtangler  command line version. </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.currentConfigurationFileName"/><h2>Current configuration file name </h2>
+<p>The name of the currently open configuration file can be seen  in the title bar behind the Dtangler DsmUI title. </p>
+<p>If the configuration has never been saved, the titlebar will  display <strong>unsaved settings.</strong></p>
+<p>If the configuration has been change since it was last saved or  created, a '*' will be displayed in front of the configuration filename.		   </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.creatingANewConfiguration"/><h2>Creating a new configuration </h2>
+<p>A new configuration can be created by selecting <strong>'New'</strong> from  the <strong>'File'</strong> menu or by pressing <strong>Ctrl+N</strong>.<br> This is essentially the same as resetting all configuration parameters  back to their defaults. </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponCreatingANewConfiguration"/><h2>Changed configuration upon creating a new configuration </h2>
+<p>If the current configuration contains changes since the last time it  has been saved, you will be asked whether to save those changes or  not before the new configuration is created. 		   </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.openAnExistingConfigurationFile"/><h2>Open an existing configuration file </h2>
+<p>An existing configuration can be opened by selecting <strong>'Open'</strong>  from the <strong>'File'</strong> menu or by pressing <strong>Ctrl+O</strong>.<br> </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponOpeningAnExistingConfigurationFile"/><h2>Changed configuration upon opening an existing configuration file </h2>
+<p>If the current configuration contains changes since the last time it  has been saved, you will be asked whether to save those changes or  not before another configuration is opened. 		   </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.saveConfiguration"/><h2>Save configuration </h2>
+<p>At any time you can save the current configuration by selecting  <strong>'Save'</strong> from the <strong>'File'</strong> menu or by pressing <strong>CTRL+S</strong>.  If this is the first time that you save the current configuration,  you will be asked for the filename to save to.  </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.saveConfigurationToDifferentFile"/><h2>Save configuration to different file </h2>
+<p>At any time you can save the current configuration to a  file of choice by selecting <strong>'Save as...'</strong> from the <strong>'File'</strong> menu  or by pressing <strong>CTRL+SHIFT+S</strong>. You will be asked for  the filename to save to.  </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponExit"/><h2>Changed configuration upon exit </h2>
+<p>If the current configuration contains changes since the last  time it has been saved, you will be asked whether to save those changes or not before exiting the gui. 		   </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropConfigFileOntoDtangler"/><h2>Drag and drop config file onto dtangler </h2>
+<p>You can quickly open a dtangler configuration by just dragging a config file from another application or window onto the dtangler window. </p>
+<p>Note that you can only drag&drop a single config file. </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.changedConfigurationUponDragAndDropConfigFileOntoDtangler"/><h2>Changed configuration upon drag and drop config file onto dtangler </h2>
+<p>If the current configuration contains changes since the last time it  has been saved, you will be asked whether to save those changes or  not before another configuration is opened. 		   </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropInputFoldersOntoDtangler"/><h2>Drag and drop input folders onto dtangler </h2>
+<p>You can quickly add input folders to a configuration by just dragging them from another application or window onto the dtangler window. </p>
+<a name="org.dtangler.swingui.mainview.impl.ManagingConfigurationsTest.dragAndDropNonFileContentsOntoDtangler"/><h2>Drag and drop non file contents onto dtangler </h2>
+<p>Dtangler currently only supports drag&drop for input folder(s) or configuration file </p>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest"/><h1>DSM interaction </h1>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomIn"/><h2>Zoom in </h2>
+<p>If the DSM that you are currently viewing, contains dependencies on a deeper scope (level), then it is possible to 'zoom in' onto specific parts of the level below the current one, by selecting those items from the DSM. </p>
+<p>After making a selection, Zooming in can be done by pressing the <strong>'zoom in'</strong> button or by selecting <strong>Zoom in onto selection</strong> from the <strong>View</strong> menu. </p>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomInOntoSpecificItems"/><h2>Zoom in onto specific items </h2>
+<p>To zoom in onto specific items in the DSM, select those items from the left-side name column of the DSM.		  Multiple items can be selected. </p>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest.zoomInOntoDependencies"/><h2>Zoom in onto dependencies </h2>
+<p>To zoom in onto dependencies in the DSM, select the cells of those dependencies from the DSM.		  Either single cells or an area of cells can be selected. </p>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest.testZoomOut"/><h2>Test zoom out </h2>
+<p>Currently, 'zoom out' does the same as selecting the scope above the current scope from the <strong>'Scope'</strong> combobox.		  You can 'Zoom out' by pressing the <strong>'Zoom out'</strong> button or by selecting <strong>'Zoom out'</strong> from the <strong>'View'</strong> menu. </p>
+<a name="org.dtangler.swingui.mainview.impl.DsmInteractionTest.showingShortenedItemNames"/><h2>Showing shortened item names </h2>
+<p>By default, the dsm shows the full name of each item. </p>
+<p>In many domains and scopes, however, all items inside the DSM tend to differ from eachother  ony at the start or end of the name. </p>
+<p>To make the DSM more readible, it is possible to  hide parts of the name that <em>all</em> items have in common. Only whole words and numbers are hidden from the start and/or end of the item's name. </p>
+<p>This can be done by clicking the <strong>'show shortened names'</strong> button on the <strong>toolbar</strong> or selecting  <strong>'show shortened names'</strong> from the <strong>'View'</strong> menu.  </p>
+&#169; 2008 Copyright</body>
+</html>

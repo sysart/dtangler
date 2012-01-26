@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="test"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-bumblebee"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dtangler-core"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dtangler-swingui"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/dtangler-ui"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-forms"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-junit-4.4"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/lib-uispec4j"/>
+	<classpathentry kind="output" path="_build/eclipse/classes"/>
+</classpath>
